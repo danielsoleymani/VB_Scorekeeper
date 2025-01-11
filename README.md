@@ -56,7 +56,7 @@ Welcome to **VB_Scorekeeper**, a powerful and user-friendly solution for trackin
 7. Open the app in your browser using the local host:
    - http://127.0.0.1:5000.
 ---
-##Contributing 
+## Contributing 
 
 Contributions are welcome! Please follow these steps:
 
