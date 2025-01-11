@@ -1,1 +1,341 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #ececec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Shared Form Inputs */
+.formTextInput, .formSelectInput {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    border: 2px solid #646464;
+    border-radius: 2px;
+    opacity: 0.8;
+    outline: none;
+}
+
+.formTextInput:focus, .formColorInput:focus, .formSelectInput:focus {
+    border-color: orange;
+}
+
+.formButtonInput {
+    width: 100%;
+    padding: 13px;
+    font-size: 15px;
+    border-radius: 2px;
+    background-color: orange;
+    cursor: pointer;
+    border: none;
+}
+
+.formButtonInput:hover {
+    background-color: rgb(217, 142, 1);
+}
+
+label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+span {
+    color: orange;
+}
+
+a {
+    color: orange;
+}
+
+.errorMessage {
+    color: red;
+    font-size: 12px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Sign-In/Sign-Up Styles */
+.signinContainer, .signupContainer {
+    margin: auto;
+    background-color: #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.308);
+}
+
+.signinContainer {
+    height: 370px;
+    width: 350px;
+}
+
+.signupContainer {
+    height: 430px;
+    width: 350px;
+}
+
+.signinForm {
+    width: 80%;
+    margin: auto;
+}
+
+.signinForm h3 {
+    margin: 15px 0;
+    font-size: 30px;
+}
+
+/* Twitter Connect Styles */
+.twitterContainer {
+    margin: auto;
+    background-color: #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.308);
+    width: 400px;
+}
+
+.twitterContainer h3 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.twitterContainer p {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #646464;
+}
+
+.twitterButton {
+    width: 100%;
+    padding: 13px;
+    font-size: 15px;
+    margin-bottom: 20px;
+    border-radius: 2px;
+    background-color: orange;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.twitterButton:hover {
+    background-color: rgb(217, 142, 1);
+}
+
+.twitterButton img {
+    height: 20px;
+    margin-right: 10px;
+}
+
+.twitterContainer a {
+    color: orange;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.twitterContainer a:hover {
+    text-decoration: underline;
+}
+
+/* New Game Creation Styles */
+.gameCreationContainer {
+    margin: auto;
+    background-color: #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.308);
+    width: 500px;
+}
+
+.gameCreationForm h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.teamRow {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.teamContainer {
+    width: 48%;
+    background-color: #ececec;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.teamContainer h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.matchInfoContainer.newGame {
+    margin-bottom: 20px;
+    background-color: #ececec;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.matchInfoContainer.newGame h4 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Scoreboard Styles */
+.scoreboardContainer {
+    margin: auto;
+    background-color: #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 0.308);
+    width: 700px;
+    text-align: center;
+}
+
+.scoreboardHeader {
+    margin-bottom: 20px;
+}
+
+.scoreboardHeader h1 {
+    font-size: 36px;
+    color: #646464;
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ececec;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.teamScore {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+
+.teamScore h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #646464;
+}
+
+.scoreButton {
+    background-color: orange;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.scoreButton:hover {
+    background-color: rgb(217, 142, 1);
+}
+
+.matchScore {
+    font-size: 20px;
+    color: #646464;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.buttonRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.editButton, .endButton {
+    background-color: orange;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+    width: 200px;
+    text-align: center;
+}
+
+.editButton:hover, .endButton:hover {
+    background-color: rgb(217, 142, 1);
+}
+
+.hidden {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.formColorInput {
+    width: 100%; /* Keep consistent width with other inputs */
+    height: 50px; /* Increase height for better visibility */
+    border: none; /* Remove border to avoid clutter */
+    border-radius: 5px; /* Optional: add rounded corners */
+    cursor: pointer; /* Indicate it's clickable */
+}
 
