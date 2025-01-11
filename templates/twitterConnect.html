@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scorekeeper</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class="twitterContainer">
+            <h3>Connect to <span>Twitter</span></h3>
+            <p>
+                Connecting your Twitter account allows us to share game updates directly to your timeline, 
+                including match results and achievements. This feature helps you keep your followers updated effortlessly.
+            </p>
+            <button class="twitterButton" onclick="window.location.href='/xconnect';">
+                Connect
+            </button>
+            <p class="footerText">
+                We’ll only post with your permission, and you can disconnect anytime. Your privacy is important to us—we’ll never share your information without consent.
+            </p>
+        </div>
+        </body>
+</html>

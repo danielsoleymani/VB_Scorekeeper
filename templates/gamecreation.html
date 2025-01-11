@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scorekeeper</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class="gameCreationContainer">
+            <form class="gameCreationForm" action="/start" method="POST">
+                <h3>New <span>Game Creation</span></h3>
+                
+                <div class="teamRow">
+                    <!-- Team 1 -->
+                    <div class="teamContainer">
+                        <h4>Team 1</h4>
+                        <input class="formTextInput" type="text" name="name1" placeholder="Team Name" required><br>
+                        <label for="color1">Team Color</label>
+                        <input class="formColorInput" type="color" name="color1" id="color1" value="#FF0000" required><br>
+                    </div>
+
+                    <!-- Team 2 -->
+                    <div class="teamContainer">
+                        <h4>Team 2</h4>
+                        <input class="formTextInput" type="text" name="name2" placeholder="Team Name" required><br>
+                        <label for="color2">Team Color</label>
+                        <input class="formColorInput" type="color" name="color2" id="color2" value="#0000FF" required><br>
+                    </div>
+                </div>
+                
+                <div class="matchInfoContainer">
+                    <h4>Match Information</h4>
+                    <input class="formTextInput" type="date" name="date" required><br>
+                    <input class="formTextInput" type="text" name="location" placeholder="Match Location" required><br>
+                    <label for="setNumbers">Select Number of Sets</label>
+                    <select class="formSelectInput" name="setNumbers" id="setNumbers" required>
+                        <option value="3">Best of 3</option>
+                        <option value="5">Best of 5</option>
+                    </select><br>
+                </div>
+
+                <input class="formButtonInput" type="submit" value="Start Game">
+            </form>
+        </div>
+
+        <!-- JavaScript to handle dynamic color updates -->
+        <script>
+            // Function to change the text color of the input to match the selected color
+            function applyDynamicColor(inputId) {
+                const colorInput = document.getElementById(inputId);
+
+                // Listen for changes to the color input value
+                colorInput.addEventListener('input', () => {
+                    const selectedColor = colorInput.value;
+                    colorInput.style.color = selectedColor;
+                });
+            }
+
+            // Apply the function to both color inputs
+            applyDynamicColor('color1');
+            applyDynamicColor('color2');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scorekeeper</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class = "signupContainer">
+            <form class = "signinForm" action = "/signup/submit" method = "POST">
+                <h3>Welcome to <span>VB Scorekeeper.</span></h3>
+                <input class = "formTextInput" type = "email" name = "email" id = "email" placeholder="Email" required><br>
+                <input class = "formTextInput" type = "password" name = "password" placeholder="Password" minlength="8" maxlength="15" required><br>
+                <input class = "formTextInput" type = "text" name = "name" placeholder = "Full Name" required><br>
+                {% if error %}
+                    <p class="errorMessage">{{ error }}</p>
+                {% endif %}
+                <input class = "formButtonInput" type = "submit" value = "Sign Up"> 
+                <p class = "signupMessage">
+                    Have an account? <a href="/">Log In</a>
+                </p> 
+            </form>
+        </div>
+    </body>
+</html>

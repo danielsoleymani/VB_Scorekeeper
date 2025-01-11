@@ -1,1 +1,35 @@
-
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scorekeeper</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    </head>
+    <body>
+        <div class="scoreboardContainer">
+            <header class="scoreboardHeader">
+                <h1>Scoreboard</h1>
+            </header>
+            <div class="scoreboard">
+                <div class="teamScore">
+                    <h2>{{ team1_name }}</h2>
+                    <button class="scoreButton" style = "background-color: {{ team1_color }};" onclick="window.location.href='/team1score';">{{ team1_set_score }}</button>
+                </div>
+                <div class="matchScore">
+                    <span>{{ team1_match_score }}</span> - <span>{{ team2_match_score }}</span>
+                </div>
+                <div class="teamScore">
+                    <h2>{{ team2_name }}</h2>
+                    <button class="scoreButton" style = "background-color: {{ team2_color }};" onclick="window.location.href='/team2score';">{{ team2_set_score }}</button>
+                </div>
+            </div>
+            <div class="buttonRow">
+                <button class="editButton">Edit Score</button>
+                <button class="endButton {% if not end_game_condition %}hidden{% endif %}" onclick="window.location.href='/endSet';">
+                    End Set/Game
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
